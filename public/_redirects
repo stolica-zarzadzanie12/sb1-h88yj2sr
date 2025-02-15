@@ -1,0 +1,10 @@
+# Force HTTPS
+http://:host/* https://:host/:splat 301!
+/* Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Handle www subdomain
+http://www.stolica-zarzadzanienieruchomosciami.pl/* https://stolica-zarzadzanienieruchomosciami.pl/:splat 301!
+https://www.stolica-zarzadzanienieruchomosciami.pl/* https://stolica-zarzadzanienieruchomosciami.pl/:splat 301!
+
+# SPA fallback
+/* /index.html 200
